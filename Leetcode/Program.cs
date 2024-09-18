@@ -2,5 +2,5 @@
 
 using Leetcode;
 
-ILeetcodeSolution solution = new MinimumBitFlipstoConvertNumber();
+ILeetcodeSolution solution = new LargestNumber();
 solution.Run();

@@ -6,16 +6,6 @@ public class DeleteNodesFromLinkedListPresentinArray : ILeetcodeSolution
     {
     }
     
- // * Definition for singly-linked list.
-    public class ListNode {
-    public int val;
-    public ListNode next;
-    public ListNode(int val=0, ListNode next=null) {
-    this.val = val;
-    this.next = next;
-    }
-    }
-    
     public class Solution {
         public ListNode ModifiedList(int[] nums, ListNode head) {
             bool[] deleteNum = new bool[100001];

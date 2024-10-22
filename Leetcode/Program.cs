@@ -2,5 +2,5 @@
 
 using Leetcode;
 
-ILeetcodeSolution solution = new LargestNumber();
+ILeetcodeSolution solution = new Maximum_Swap();
 solution.Run();

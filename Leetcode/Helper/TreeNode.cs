@@ -1,7 +1,7 @@
 ﻿namespace Leetcode;
 
 // Definition for a binary tree node.
-public class TreeNode {
+public class TreeNode : IComparable<TreeNode> {
     public int val;
     public TreeNode? left;
     public TreeNode? right;
@@ -47,5 +47,16 @@ public class TreeNode {
         }
 
         return root;
+    }
+
+    public int CompareTo(TreeNode? other)
+    {
+        if (ReferenceEquals(this, other)) return 0;
+        if (ReferenceEquals(null, other)) return 1;
+        var valComparison = val.CompareTo(other.val);
+        if (valComparison != 0) return valComparison;
+        var leftComparison = Comparer<TreeNode?>.Default.Compare(left, other.left);
+        if (leftComparison != 0) return leftComparison;
+        return Comparer<TreeNode?>.Default.Compare(right, other.right);
     }
 }

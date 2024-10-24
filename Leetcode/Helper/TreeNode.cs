@@ -11,8 +11,12 @@ public class TreeNode : IComparable<TreeNode> {
         this.right = right;
     }
     
-    public static TreeNode GenerateBinaryTree(int?[] rootInts)
+    public static TreeNode? GenerateBinaryTree(int?[] rootInts)
     {
+        if (rootInts.Length == 0)
+        {
+            return null;
+        }
         TreeNode root = new TreeNode((int)rootInts[0]);
         List<TreeNode> treeQueue = new List<TreeNode>();
         treeQueue.Add(root);

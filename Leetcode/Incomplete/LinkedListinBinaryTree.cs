@@ -11,34 +11,34 @@ public class LinkedListinBinaryTree : ILeetcodeSolution
         int[] headInts = [4, 2, 8];
         int?[] rootInts = [1, 4, 4, null, 2, 2, null, 1, null, 6, 8, null, null, null, null, 1, 3];
         TreeNode root = TreeNode.GenerateBinaryTree(rootInts);
-        ListNode head = ListNode.GenerateLinkedList(headInts);
+        ListNode<int> head = ListNode<int>.GenerateLinkedList(headInts);
         
         Console.WriteLine(solution.IsSubPath(head, root));
 
         headInts = [1, 4, 2, 6];
         rootInts = [1, 4, 4, null, 2, 2, null, 1, null, 6, 8, null, null, null, null, 1, 3];
         root = TreeNode.GenerateBinaryTree(rootInts);
-        head = ListNode.GenerateLinkedList(headInts);
+        head = ListNode<int>.GenerateLinkedList(headInts);
 
         Console.WriteLine(solution.IsSubPath(head, root));
 
         headInts = [1, 4, 2, 6, 8];
         rootInts = [1, 4, 4, null, 2, 2, null, 1, null, 6, 8, null, null, null, null, 1, 3];
         root = TreeNode.GenerateBinaryTree(rootInts);
-        head = ListNode.GenerateLinkedList(headInts);
+        head = ListNode<int>.GenerateLinkedList(headInts);
              
         Console.WriteLine(solution.IsSubPath(head, root));
         
         headInts = [1,10];
         rootInts = [1,null,1,10,1,9];
         root = TreeNode.GenerateBinaryTree(rootInts);
-        head = ListNode.GenerateLinkedList(headInts);
+        head = ListNode<int>.GenerateLinkedList(headInts);
         Console.WriteLine(solution.IsSubPath(head, root));
         
         headInts = [2, 2, 1];
         rootInts = [2,null,2,null,2,null,1];
         root = TreeNode.GenerateBinaryTree(rootInts);
-        head = ListNode.GenerateLinkedList(headInts);
+        head = ListNode<int>.GenerateLinkedList(headInts);
         Console.WriteLine(solution.IsSubPath(head, root));
     }
 
@@ -49,7 +49,7 @@ public class LinkedListinBinaryTree : ILeetcodeSolution
     
 
      public class Solution {
-        public bool IsSubPath(ListNode head, TreeNode root)
+        public bool IsSubPath(ListNode<int> head, TreeNode root)
         {
             List<int> headList = new List<int>();
             while (head != null)

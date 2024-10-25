@@ -7,20 +7,20 @@ public class SplitLinkedListinParts : ILeetcodeSolution
         Solution solution = new Solution();
         int[] headInts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         int k = 3;
-        ListNode.PrintArray(solution.SplitListToParts(ListNode.GenerateLinkedList(headInts), k));
+        ListNode<int>.PrintArray(solution.SplitListToParts(ListNode<int>.GenerateLinkedList(headInts), k));
         
         headInts = [1, 2, 3];
         k = 5;
-        ListNode.PrintArray(solution.SplitListToParts(ListNode.GenerateLinkedList(headInts), k));
+        ListNode<int>.PrintArray(solution.SplitListToParts(ListNode<int>.GenerateLinkedList(headInts), k));
     }
     
     public class Solution {
-        public ListNode[] SplitListToParts(ListNode head, int k)
+        public ListNode<int>[] SplitListToParts(ListNode<int> head, int k)
         {
-            ListNode[] array = new ListNode[k];
+            ListNode<int>[] array = new ListNode<int>[k];
             
             int size = 0;
-            ListNode temp = head;
+            ListNode<int> temp = head;
             while (temp != null)
             {
                 temp = temp.next;
@@ -29,7 +29,7 @@ public class SplitLinkedListinParts : ILeetcodeSolution
 
             int minSize = size / k;
             int remainder = size - minSize * k;
-            temp = new ListNode(-1, head);
+            temp = new ListNode<int>(-1, head);
 
             for (int i = 1; i < k; i++)
             {

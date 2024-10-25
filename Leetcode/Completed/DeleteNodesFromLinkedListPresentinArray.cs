@@ -7,15 +7,15 @@ public class DeleteNodesFromLinkedListPresentinArray : ILeetcodeSolution
     }
     
     public class Solution {
-        public ListNode ModifiedList(int[] nums, ListNode head) {
+        public ListNode<int> ModifiedList(int[] nums, ListNode<int> head) {
             bool[] deleteNum = new bool[100001];
             foreach (int i in nums){
                 deleteNum[i] = true;
             }
 
-            ListNode? currentNode = null;
-            ListNode? previousNode = head;
-            ListNode? nextNode = head;
+            ListNode<int>? currentNode = null;
+            ListNode<int>? previousNode = head;
+            ListNode<int>? nextNode = head;
 
             while (nextNode != null) {
                 previousNode = currentNode;

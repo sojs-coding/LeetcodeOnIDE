@@ -8,7 +8,7 @@ public class SpiralMatrixIV : ILeetcodeSolution
         int m = 3;
         int n = 5;
         int[] headInts = [3, 0, 2, 6, 8, 1, 7, 9, 4, 2, 5, 5, 0];
-        ListNode head = ListNode.GenerateLinkedList(headInts);
+        ListNode<int> head = ListNode<int>.GenerateLinkedList(headInts);
         foreach (int[] arr in solution.SpiralMatrix(m, n, head))
         {
             foreach (int i in arr)
@@ -21,7 +21,7 @@ public class SpiralMatrixIV : ILeetcodeSolution
     }
     
     public class Solution {
-        public int[][] SpiralMatrix(int m, int n, ListNode head)
+        public int[][] SpiralMatrix(int m, int n, ListNode<int> head)
         {
             int[][] matrix = new int[m][];
             for (int i = 0; i < matrix.Length; i++)
